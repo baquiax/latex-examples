@@ -20,18 +20,31 @@ This is the repo [https://github.com/cmhughes/latexindent.pl](https://github.com
 
 Install this in your local environment isn't conventional as you expected, but is easy to do.
 
-Fromt the repo we need only some files (all are interesting but for indent, just some of them are needed)
+You need first to clone the git repo in your local machine.
 
-Download them with this simple instructions:
+Use this instruction to do that:
 ```
-wget -P latexindent/ https://raw.githubusercontent.com/cmhughes/latexindent.pl/master/latexindent.pl
-
-wget -P latexindent/  https://raw.githubusercontent.com/cmhughes/latexindent.pl/master/defaultSettings.yaml
-
-wget -P latexindent/path-helper-files/ https://raw.githubusercontent.com/cmhughes/latexindent.pl/master/path-helper-files/CMakeLists.txt
-
-wget -P latexindent/path-helper-files/ https://raw.githubusercontent.com/cmhughes/latexindent.pl/master/path-helper-files/cmake_uninstall.cmake.in
+wget  -c  https://github.com/cmhughes/latexindent.pl/archive/V3.8.tar.gz -O - | tar -xzv
 ```
 
+Now you need to compile and install the `latexindent`, bur before you need to validate if the compiler is installe on your machine:
+```
+sudo apt-get install cmake
+sudo apt-get install build-essential
+cpan YAML::Tiny
+cpan File::HomeDir
+cpan Unicode::GCString
+cpan --installdeps Log::Log4perl
+cpan --force Log::Log4perl
+cpan Log::Dispatch::File
+```
+
+Ok, all dependencies are ready. So execute the below commands:
+
+```
+mkdir -p latexindent.pl-3.8/build && cd latexindent.pl-3.8/build
+cmake ../path-helper-files
+make install
+```
 
 
