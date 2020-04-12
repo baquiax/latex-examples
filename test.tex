@@ -1,11 +1,13 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+% Preable section
 \title{My first document}
 \date{2020-04-11}
 \author{Alexander Baquiax}
 
 \begin{document}
-% Preable section
+
 \pagenumbering{gobble}
 \maketitle
 \newpage
@@ -20,10 +22,20 @@ More text.
 \paragraph{Paragraph}
 Some more text.
 
-\subparagraph{Subparagraph}
+\subparagraph{Subparagraph 1}
 Even more text.
 
 \section{Another section}
 
+Here a simple equation:
+
+Here a simple equation without number:
+\begin{equation*}
+    f(x) = x*x
+\end{equation*}
+
+\begin{equation}
+    f(x) = x^2
+\end{equation}
 
 \end{document}

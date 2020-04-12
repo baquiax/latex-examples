@@ -9,7 +9,7 @@ This example repo was made for GNU/Linux OSs.
 
 Specifically for Ubuntu you  need to have installed this dependencies:
 ```
-apt-get install texlive texlive-base texlive-latex-base texlive-latex-recommended texlive-latex-extra
+apt-get install texlive texlive-base texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-full
 ```
 
 ### Optional
