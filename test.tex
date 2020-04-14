@@ -1,6 +1,9 @@
 \documentclass{article}
 
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
 % Preable section
 \title{My first document}
 \date{2020-04-11}
@@ -83,6 +86,26 @@ If you have a expression with multiple equations you can align them
     \left(\sqrt{1} + 2\right)
 \end{equation}
 
+\section{Figures}
 
+\begin{figure}[h] % h means: here
+    \includegraphics[width=\linewidth]{images/panda.jpg}
+    \caption{A panda.}
+    \label{fig:panda}
+\end{figure}
 
+Figure \ref{fig:panda} shows a panda
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.4\linewidth} % b = bottom and 0.4 means 40% of the page width
+        \includegraphics[width=\linewidth]{images/panda.jpg}
+        \caption{Pandita}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{images/panda.jpg}
+        \caption{Other pandita}
+    \end{subfigure}
+    \caption{A pair of good pandas}
+\end{figure}
 \end{document}
