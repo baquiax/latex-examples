@@ -3,18 +3,30 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{setspace}
 
 % Preable section
 \title{My first document}
 \date{2020-04-11}
 \author{Alexander Baquiax}
+\setcounter{tocdepth}{3} % 3 shos subsections
+
 
 \begin{document}
 
 \pagenumbering{gobble}
+
 \maketitle
 \newpage
+
+\doublespacing
+\tableofcontents
+\singlespacing
+\newpage
+
 \pagenumbering{arabic}
+
+
 
 \section{Section}
 Structuring a document is easy!
@@ -108,4 +120,19 @@ Figure \ref{fig:panda} shows a panda
     \end{subfigure}
     \caption{A pair of good pandas}
 \end{figure}
+
+\section{Tables}
+
+\begin{table}
+    \caption{A dummy table}
+\end{table}
+
+\newpage
+
+\begin{appendix}
+    \listoffigures
+    \listoftables
+\end{appendix}
+\newpage
+
 \end{document}
