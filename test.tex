@@ -4,6 +4,9 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{setspace}
+\usepackage[backend=bibtex]{biblatex}
+
+\bibliography{test}
 
 % Preable section
 \title{My first document}
@@ -106,7 +109,6 @@ If you have a expression with multiple equations you can align them
     \label{fig:panda}
 \end{figure}
 
-Figure \ref{fig:panda} shows a panda
 
 \begin{figure}[h!]
     \centering
@@ -127,7 +129,11 @@ Figure \ref{fig:panda} shows a panda
     \caption{A dummy table}
 \end{table}
 
-\newpage
+\section{Cite}
+Random citation \autocite{DUMMY:1} embedded in text.
+
+
+\printbibliography
 
 \begin{appendix}
     \listoffigures
