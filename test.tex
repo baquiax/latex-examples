@@ -9,7 +9,21 @@
 \usepackage{multirow}
 \usepackage{longtable} % Multipage tables
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{listings-golang}
+\usepackage{color}
 
+\lstset{
+    frame=single,
+    basicstyle=\footnotesize,
+    keywordstyle=\color{red},
+    numbers=left,
+    numbersep=5pt,
+    showstringspaces=false, 
+    stringstyle=\color{blue},
+    tabsize=4,
+    language=Golang % this is it !
+}
 
 \hypersetup{
     colorlinks=true,
@@ -186,7 +200,10 @@ This is a simple link: \href{www.google.com}{Google}
 
 Other link \url{https://baquiax.dev}
 \newpage
+\section{Codes}
 
+\lstinputlisting{test.go}
+\newpage
 
 \printbibliography
 
