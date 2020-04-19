@@ -1,17 +1,66 @@
 \documentclass{article}
 
 \usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage{siunitx} % We will use this for aling decimal points
+\usepackage{multirow}
+\usepackage{longtable} % Multipage tables
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{listings-golang}
+\usepackage{color}
+
+\lstset{
+    frame=single,
+    basicstyle=\footnotesize,
+    keywordstyle=\color{red},
+    numbers=left,
+    numbersep=5pt,
+    showstringspaces=false, 
+    stringstyle=\color{blue},
+    tabsize=4,
+    language=Golang % this is it !
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\sisetup{
+    round-mode      = places,
+    round-precision = 2,
+}
+
+\bibliography{test}
+
 % Preable section
 \title{My first document}
 \date{2020-04-11}
 \author{Alexander Baquiax}
+\setcounter{tocdepth}{3} % 3 shos subsections
+
 
 \begin{document}
 
 \pagenumbering{gobble}
+
 \maketitle
 \newpage
+
+\doublespacing
+\tableofcontents
+\singlespacing
+\newpage
+
 \pagenumbering{arabic}
+
+
 
 \section{Section}
 Structuring a document is easy!
@@ -83,6 +132,108 @@ If you have a expression with multiple equations you can align them
     \left(\sqrt{1} + 2\right)
 \end{equation}
 
+\section{Figures}
 
+\begin{figure}[h] % h means: here
+    \includegraphics[width=\linewidth]{images/panda.jpg}
+    \caption{A panda.}
+    \label{fig:panda}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.4\linewidth} % b = bottom and 0.4 means 40% of the page width
+        \includegraphics[width=\linewidth]{images/panda.jpg}
+        \caption{Pandita}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
+        \includegraphics[width=\linewidth]{images/panda.jpg}
+        \caption{Other pandita}
+    \end{subfigure}
+    \caption{A pair of good pandas}
+\end{figure}
+
+\section{Tables}
+
+\begin{table}
+    \caption{A dummy table}
+\end{table}
+
+\section{Cite}
+Random citation \autocite{DUMMY:1} embedded in text.
+
+\newpage
+This is a footnote \footnote{\label{myFootNote} Hello}
+
+Im refering to \ref{myFootNote}
+\newpage
+\section{Tables}
+
+\begin{table}[h!] % h! == here
+    \begin{center}
+        \caption{My table}
+        \label{tab:table}
+    \end{center}
+
+    \begin{tabular}{l|S|r} % first column = left, 2nd = center, S will fix numbers to align them
+        \textbf{Value 1}        & \textbf{Value 2} & \textbf{Value 3} \\
+        $\alpha$                & $\beta$          & $\gamma$         \\
+        \hline
+        \multirow{2}{*}{12}     & 90.2             & a                \\
+                                & 10.2             & 10               \\
+        \hline
+        1.234                   & 2.34231          & 3.23             \\
+        3.4                     & 2.22             & 1.443            \\
+        1.234                   & 2.34231          & 3.23             \\
+        3.4                     & 2.22             & 1.443            \\
+        \hline
+        \multicolumn{2}{l|}{12} & a                                   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+\section{Links}
+
+This is a simple link: \href{www.google.com}{Google}
+
+Other link \url{https://baquiax.dev}
+\newpage
+\section{Codes}
+
+\lstinputlisting{test.go}
+\newpage
+\section{Lists}
+\subsection{Unordered}
+\begin{itemize}
+    \item One
+    \item Two
+    \item Three
+\end{itemize}
+
+\subsection{Orderes}
+\begin{enumerate}
+    \item One
+    \item Two
+    \item Three
+\end{enumerate}
+
+\subsection{Nested}
+\begin{itemize}
+    \item First
+          \begin{enumerate}
+              \item First
+          \end{enumerate}
+\end{itemize}
+
+\newpage
+\printbibliography
+
+\begin{appendix}
+    \listoffigures
+    \listoftables
+\end{appendix}
+\newpage
 
 \end{document}
