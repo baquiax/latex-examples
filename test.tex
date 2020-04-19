@@ -177,18 +177,18 @@ Im refering to \ref{myFootNote}
     \end{center}
 
     \begin{tabular}{l|S|r} % first column = left, 2nd = center, S will fix numbers to align them
-        \textbf{Value 1}    & \textbf{Value 2} & \textbf{Value 3} \\
-        $\alpha$            & $\beta$          & $\gamma$         \\
+        \textbf{Value 1}        & \textbf{Value 2} & \textbf{Value 3} \\
+        $\alpha$                & $\beta$          & $\gamma$         \\
         \hline
-        \multirow{2}{*}{12} & 90.2             & a                \\
-                            & 10.2             & 10               \\
+        \multirow{2}{*}{12}     & 90.2             & a                \\
+                                & 10.2             & 10               \\
         \hline
-        1.234               & 2.34231          & 3.23             \\
-        3.4                 & 2.22             & 1.443            \\
-        1.234               & 2.34231          & 3.23             \\
-        3.4                 & 2.22             & 1.443            \\
+        1.234                   & 2.34231          & 3.23             \\
+        3.4                     & 2.22             & 1.443            \\
+        1.234                   & 2.34231          & 3.23             \\
+        3.4                     & 2.22             & 1.443            \\
         \hline
-        \multicolumn{2}{l|}{12} & a\\
+        \multicolumn{2}{l|}{12} & a                                   \\
         \hline
     \end{tabular}
 \end{table}
@@ -204,7 +204,30 @@ Other link \url{https://baquiax.dev}
 
 \lstinputlisting{test.go}
 \newpage
+\section{Lists}
+\subsection{Unordered}
+\begin{itemize}
+    \item One
+    \item Two
+    \item Three
+\end{itemize}
 
+\subsection{Orderes}
+\begin{enumerate}
+    \item One
+    \item Two
+    \item Three
+\end{enumerate}
+
+\subsection{Nested}
+\begin{itemize}
+    \item First
+          \begin{enumerate}
+              \item First
+          \end{enumerate}
+\end{itemize}
+
+\newpage
 \printbibliography
 
 \begin{appendix}
