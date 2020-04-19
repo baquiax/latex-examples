@@ -8,6 +8,15 @@
 \usepackage{siunitx} % We will use this for aling decimal points
 \usepackage{multirow}
 \usepackage{longtable} % Multipage tables
+\usepackage{hyperref}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 \sisetup{
     round-mode      = places,
@@ -170,6 +179,12 @@ Im refering to \ref{myFootNote}
     \end{tabular}
 \end{table}
 
+\newpage
+\section{Links}
+
+This is a simple link: \href{www.google.com}{Google}
+
+Other link \url{https://baquiax.dev}
 \newpage
 
 
